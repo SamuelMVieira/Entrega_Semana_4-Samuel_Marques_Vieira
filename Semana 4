@@ -1,0 +1,175 @@
+// Variáveis //
+let nome = "Samuka";
+let telefone = "(11)95555-4444";
+let convenioMedico = true;
+let profissao = "Analista TI";
+let salario = 80.000;
+let profissional = `Colaborador ${nome}, telefone ${telefone}, Convenio ${textoConvenio}, profissão ${profissao} e salário de R$${salario}.`;
+
+console.log(profissional);
+
+//Variáveis Ex2 //
+let num1 = 1;
+let num2 = 2;
+
+document.write(`Número um: ${num1}`);
+document.write(`Número dois: ${num2}`);
+document.write('<br>');
+
+document.write('Troca:');
+document.write('<br>');
+let troca1 = num1;
+let troca2 = num2;
+num1 = num2;
+num2 = num1;
+
+document.write(`Número um: ${num1}`);
+document.write('<br>');
+document.write(`Número dois: ${num2}` );
+
+
+// Operações aritméticas //
+
+let inteiro = 5;
+let decimal = 7.8;
+let adicao = inteiro + decimal;
+let subtracao = inteiro - decimal;
+let potenciacao = (adicao - .5) ** 2;
+let expressao1 = inteiro - 4 / 2 / 2;
+let expressao2 = (inteiro - 4) / 2;
+let expressao3 = 2 + subtracao * 2;
+let expressao4 = (2 + subtracao) * 2;
+let modulo1 = potenciacao % 2;
+let modulo2 = (inteiro - 1) % 2;
+
+document.write(`Número inteiro: ${inteiro}`);
+document.write('<br>');
+document.write(`Número decimal: ${decimal}`);
+document.write('<br>');
+document.write(`Adição: ${adicao}`);
+document.write('<br>');
+document.write(`Subtração: ${subtracao}`);
+document.write('<br>');
+document.write(`Potenciação: ${potenciacao}`);
+document.write('<br>');
+document.write(`expressao1 = inteiro - 4 / 2 / 2: ${expressao1}`);
+document.write('<br>');
+document.write(`expressao2 = (inteiro - 4) / 2: ${expressao2}`);
+document.write('<br>');
+document.write(`expressao3 = 2 + subtracao * 2: ${expressao3}`);
+document.write('<br>');
+document.write(`expressao4 = (2 + subtracao) * 2: ${expressao4}`);
+document.write('<br>');
+document.write(`modulo1 = potenciacao % 2: ${modulo1}`);
+document.write('<br>');
+document.write(`modulo2 = (inteiro - 1) % 2: ${modulo2}` );
+
+// Idade para votar //
+
+let idade = prompt("Informe sua idade: ");
+
+if (idade >= 18 & idade <= 70) {
+    document.write('Votação obrigatória. Bom voto!');
+
+} else if (idade < 16) {
+    document.write('Idade insuficiente para o voto')
+
+} else document.write('Seu voto é opcional');
+
+
+// Bug no software //
+
+let Altura = document.querySelector('Altura');
+let Raio = document.querySelector('Raio');
+let totalVolume = document.querySelector('Resultado');
+console.log(Altura);
+console.log(Raio);
+
+    if (Entradas(raio) && Entradas(altura)) {
+        let area = calCirculo(raio);
+        let volume = calCilindro(area, altura)*1000;
+        resultadoVolume.innerHTML=`${volume.toFixed(2)} Litros`;
+    } else{
+        resultadoVolume.innerHTML="Valor não permitido, digite números";
+    }
+    function validarEntradas(valor) {
+    return (!isNaN(valor) && valor>0) ? true : false;
+}
+
+function calCirculo(raioMetros) {
+    return Math.PI * raioMetros ** 2;
+}
+
+function calCilindro(areaBaseMetros, alturaMetros) {
+    return areaBaseMetros * alturaMetros;
+}
+
+
+// Estruturas de Repetição //
+
+// a) Mostre os números de 1 a 50 na tela, dizendo se é par ou ímpar //
+let i =1;
+while (i <= 50){
+    (i%2 == 0) == true ? document.write(`O número ${i} é par <br>`) : document.write(`O número ${i} é ímpar <br>`);
+    i++;    
+}
+
+// b) Mostre apenas os múltiplos de 3 entre 1 e 100 //
+document.write('<br> <br> Múltiplos de 3: <br>')
+let m = 1;
+while (m <= 100){
+    if (m%3 == 0) document.write(`${m} <br>`);
+    m++;
+}
+
+// c) Mostre a seguinte sequência (de 100 até 0, pulando de dois em dois) //
+document.write('<br><br>Sequência de 100 até 0, pulando de dois em dois:');
+for (
+    var
+        sequencia = 100;
+        sequencia >= 0;
+    sequencia--){
+        document.write ( sequencia );
+    sequencia--;
+} 
+
+
+// Listas //
+
+// 1. Crie uma lista chamada pessoa, coloque valores dentro dela como: nome (string), idade (inteiro), CPF (string), altura (decimal), se é maior de idade ou não (valor booleano true ou false) //
+let pessoa = ["Samuka","21","555.222.333-21", 1.73, true];
+let i = 0;
+while (i <= (pessoa.length - 1)){
+    document.write(pessoa[i] + '<br>');
+    i++;    
+}
+document.write('<br>');
+
+// 2. Crie um programa que recebe uma quantidade máxima de 10 de letras e ao final exibe todas elas no console. //
+let letras = [];
+let letraInformada;
+
+function recebeLetra(){
+    letraInformada = prompt("Digite uma letra: ");
+    letras.push(letraInformada);
+}
+for (j = 1; j<=10; j++) {
+    recebeLetra();
+}
+for (k = 0; k < (letras.length); k++){
+    document.write(letras[k] + '<br>');
+}
+
+// 3. Considerando o exercício anterior, refaça ele criando uma lista que irá armazenar as letras e em seguida mostre no console: //
+
+a) A primeira letra digitada
+b) A quarta letra digitada
+c) A quinta letra digitada
+d) A última letra digitada
+e) O tamanho da lista criada
+
+document.write(`Primeira letra digitada: ${letras[0]} <br>`);
+document.write(`Quarta letra digitada: ${letras[3]} <br>`);
+document.write(`Quinta letra digitada: ${letras[4]} <br>`);
+document.write(`Última letra digitada: ${letras[letras.length-1]} <br>`);
+document.write(`Tamanho da lista criada: ${letras.length}`);
